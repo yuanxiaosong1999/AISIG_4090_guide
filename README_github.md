@@ -28,7 +28,7 @@ ssh -p 23222 <你的用户名>@<服务器IP>
 
 ## 👤 当前管理员
 
-袁小松（yuanxiaosong）
+袁晓松（yuanxiaosong）
 
 ## 📝 文档更新
 
