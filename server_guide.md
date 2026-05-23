@@ -111,7 +111,7 @@ passwd
 ### 连接命令
 
 ```bash
-ssh -p 23222 <你的用户名>@<服务器IP>
+ssh -p 23222 <你的用户名>@202.120.32.244
 ```
 
 ⚠️ **注意端口是 23222，不是默认 22**。如果你看网上教程或问 AI，它们一般默认 22，记得自己加 `-p 23222`。
@@ -119,7 +119,7 @@ ssh -p 23222 <你的用户名>@<服务器IP>
 例如：
 
 ```bash
-ssh -p 23222 zhangsan@<服务器IP>
+ssh -p 23222 zhangsan@202.120.32.244
 ```
 
 首次登录会问 `Are you sure you want to continue connecting (yes/no)?`，输入 `yes` 即可。
@@ -130,7 +130,7 @@ ssh -p 23222 zhangsan@<服务器IP>
 
 ```
 Host lab4090
-    HostName <服务器IP>
+    HostName 202.120.32.244
     Port 23222
     User <你的用户名>
 ```
@@ -149,7 +149,7 @@ ssh-keygen -t ed25519
 # 一路回车（密码可设可不设）
 
 # 上传公钥（注意 -p 23222 端口！）
-ssh-copy-id -p 23222 <你的用户名>@<服务器IP>
+ssh-copy-id -p 23222 <你的用户名>@202.120.32.244
 # 或者用 config 别名
 ssh-copy-id lab4090
 ```
@@ -289,7 +289,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 连服务器时加 `-R` 参数：
 
 ```bash
-ssh -p 23222 -R 7890:127.0.0.1:7890 <你的用户名>@<服务器IP>
+ssh -p 23222 -R 7890:127.0.0.1:7890 <你的用户名>@202.120.32.244
 ```
 
 登录服务器后：
@@ -313,7 +313,7 @@ curl -I https://www.google.com
 
 ```
 Host lab4090
-    HostName <服务器IP>
+    HostName 202.120.32.244
     Port 23222
     User <你的用户名>
     RemoteForward 7890 127.0.0.1:7890
@@ -346,7 +346,7 @@ source ~/proxy_on.sh
 
    ```
    Host lab4090
-       HostName <服务器IP>
+       HostName 202.120.32.244
        Port 23222
        User <你的用户名>
        RemoteForward 7890 127.0.0.1:7890
